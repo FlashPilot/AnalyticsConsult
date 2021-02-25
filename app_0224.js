@@ -54,12 +54,12 @@ function OldCustomer({ navigation }) {
             onPress={() => navigation.navigate('Scan')}
           />
         </View>
-        <SafeAreaView style={stylesButton.container}>
+        <View style={ {width: 100, height: 50, margin:20}}>
           <Button
             title="Cancel"
             onPress={() => navigation.navigate('Home')}
           />
-        </SafeAreaView> 
+        </View> 
       </View>
     </View>
   );
@@ -100,7 +100,7 @@ function NewCustomer({ navigation }) {
             onPress={() => navigation.navigate('Scan')}
           />
         </View>
-        <SafeAreaView style={stylesButton.container}>
+        <SafeAreaView style={ {width: 100, height: 50, margin:20}}>
           <Button
             title="Cancel"
             onPress={() => navigation.navigate('Home')}
@@ -120,15 +120,15 @@ function ScanScreen() {
   );
 }
 
-const stylesButton = StyleSheet.create({
-  container: {
-    flex: 1,
-    color: "dodgerblue",
-    width: 50, 
-    height: 50, 
-    margin:20
-  },
-});
+// const stylesButton = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     color: "dodgerblue",
+//     width: 50, 
+//     height: 50, 
+//     margin:20
+//   },
+// });
 
 const Stack = createStackNavigator();
 export default function App() {
